@@ -1,0 +1,3334 @@
+{
+  "contractName": "Roles",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "bot",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "validate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_bot",
+          "type": "address"
+        }
+      ],
+      "name": "setBot",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "name": "_role",
+          "type": "uint8"
+        }
+      ],
+      "name": "setUserRole",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getRole",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_role",
+          "type": "uint8"
+        }
+      ],
+      "name": "validateAs",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405260008054600160a060020a031916331790556103d4806100256000396000f30060806040526004361061008d5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166303a69611811461009257806310814c37146100cd57806344276733146100fe5780636901f668146101435780636b5caec4146101585780638da5cb5b1461017b578063990892d414610190578063f2fde38b146101ab575b600080fd5b34801561009e57600080fd5b506100b9600160a060020a036004351660ff602435166101cc565b604080519115158252519081900360200190f35b3480156100d957600080fd5b506100e261024e565b60408051600160a060020a039092168252519081900360200190f35b34801561010a57600080fd5b5061011f600160a060020a036004351661025d565b6040518082600381111561012f57fe5b60ff16815260200191505060405180910390f35b34801561014f57600080fd5b506100b961027b565b34801561016457600080fd5b50610179600160a060020a036004351661028c565b005b34801561018757600080fd5b506100e26102d2565b34801561019c57600080fd5b506100b960ff600435166102e1565b3480156101b757600080fd5b50610179600160a060020a0360043516610314565b60006003803360009081526002602052604090205460ff1660038111156101ef57fe5b14806102055750600054600160a060020a031633145b151561021057600080fd5b600160a060020a0384166000908152600260205260409020805484919060ff1916600183600381111561023f57fe5b02179055506001949350505050565b600154600160a060020a031681565b600160a060020a031660009081526002602052604090205460ff1690565b600054600160a060020a0316331490565b600054600160a060020a031633146102a357600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600054600160a060020a031681565b60008160038111156102ef57fe5b3360009081526002602052604090205460ff16600381111561030d57fe5b1492915050565b600054600160a060020a0316331461032b57600080fd5b600160a060020a038116151561034057600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820a13ebf5895d443ee4a9f89e10f28c2a33f514a8554c5cab3d39fb70ae2d90e8d0029",
+  "deployedBytecode": "0x60806040526004361061008d5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166303a69611811461009257806310814c37146100cd57806344276733146100fe5780636901f668146101435780636b5caec4146101585780638da5cb5b1461017b578063990892d414610190578063f2fde38b146101ab575b600080fd5b34801561009e57600080fd5b506100b9600160a060020a036004351660ff602435166101cc565b604080519115158252519081900360200190f35b3480156100d957600080fd5b506100e261024e565b60408051600160a060020a039092168252519081900360200190f35b34801561010a57600080fd5b5061011f600160a060020a036004351661025d565b6040518082600381111561012f57fe5b60ff16815260200191505060405180910390f35b34801561014f57600080fd5b506100b961027b565b34801561016457600080fd5b50610179600160a060020a036004351661028c565b005b34801561018757600080fd5b506100e26102d2565b34801561019c57600080fd5b506100b960ff600435166102e1565b3480156101b757600080fd5b50610179600160a060020a0360043516610314565b60006003803360009081526002602052604090205460ff1660038111156101ef57fe5b14806102055750600054600160a060020a031633145b151561021057600080fd5b600160a060020a0384166000908152600260205260409020805484919060ff1916600183600381111561023f57fe5b02179055506001949350505050565b600154600160a060020a031681565b600160a060020a031660009081526002602052604090205460ff1690565b600054600160a060020a0316331490565b600054600160a060020a031633146102a357600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600054600160a060020a031681565b60008160038111156102ef57fe5b3360009081526002602052604090205460ff16600381111561030d57fe5b1492915050565b600054600160a060020a0316331461032b57600080fd5b600160a060020a038116151561034057600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820a13ebf5895d443ee4a9f89e10f28c2a33f514a8554c5cab3d39fb70ae2d90e8d0029",
+  "sourceMap": "57:1566:10:-;;;234:5:7;:18;;-1:-1:-1;;;;;;234:18:7;242:10;234:18;;;57:1566:10;;;;;;",
+  "deployedSourceMap": "57:1566:10:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;930:177;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;930:177:10;-1:-1:-1;;;;;930:177:10;;;;;;;;;;;;;;;;;;;;;;;;;;;83:18:7;;8:9:-1;5:2;;;30:1;27;20:12;5:2;83:18:7;;;;;;;;-1:-1:-1;;;;;83:18:7;;;;;;;;;;;;;;1268:97:10;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1268:97:10;-1:-1:-1;;;;;1268:97:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1002:94:7;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1002:94:7;;;;810:78;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;810:78:7;-1:-1:-1;;;;;810:78:7;;;;;;;56:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;56:20:7;;;;1505:113:10;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1505:113:10;;;;;;;1270:196:7;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1270:196:7;-1:-1:-1;;;;;1270:196:7;;;;;930:177:10;1040:4;1009:15;;400:10;394:17;;;;:5;:17;;;;;;;;:26;;;;;;;;;:49;;;-1:-1:-1;438:5:10;;-1:-1:-1;;;;;438:5:10;424:10;:19;394:49;386:58;;;;;;;;-1:-1:-1;;;;;1057:12:10;;;;;;:5;:12;;;;;:20;;1072:5;;1057:12;-1:-1:-1;;1057:20:10;;1072:5;1057:20;;;;;;;;;;;;-1:-1:-1;1095:4:10;;930:177;-1:-1:-1;;;;930:177:10:o;83:18:7:-;;;-1:-1:-1;;;;;83:18:7;;:::o;1268:97:10:-;-1:-1:-1;;;;;1345:12:10;1321:4;1345:12;;;:5;:12;;;;;;;;;1268:97::o;1002:94:7:-;1043:4;1082:5;-1:-1:-1;;;;;1082:5:7;1068:10;:19;;1002:94::o;810:78::-;322:5;;-1:-1:-1;;;;;322:5:7;308:10;:19;300:28;;;;;;870:3;:10;;-1:-1:-1;;870:10:7;-1:-1:-1;;;;;870:10:7;;;;;;;;;;810:78::o;56:20::-;;;-1:-1:-1;;;;;56:20:7;;:::o;1505:113:10:-;1558:4;1604:5;1583:26;;;;;;;;1589:10;1583:17;;;;:5;:17;;;;;;;;:26;;;;;;;;;;1505:113;-1:-1:-1;;1505:113:10:o;1270:196:7:-;322:5;;-1:-1:-1;;;;;322:5:7;308:10;:19;300:28;;;;;;-1:-1:-1;;;;;1352:23:7;;;;1344:32;;;;;;1413:5;;;1392:38;;-1:-1:-1;;;;;1392:38:7;;;;1413:5;;;1392:38;;;1441:5;:17;;-1:-1:-1;;1441:17:7;-1:-1:-1;;;;;1441:17:7;;;;;;;;;;1270:196::o",
+  "source": "pragma solidity ^0.4.23;\r\n\r\nimport \"./Ownable.sol\";\r\n\r\n\r\ncontract Roles is Ownable {\r\n\r\n    enum Role {\r\n        Default,\r\n        Admin,\r\n        Manager,\r\n        SuperAdmin\r\n    }\r\n\r\n    mapping(address => Role) internal roles;\r\n\r\n    modifier onlyAs(Role _role) {\r\n        require(roles[msg.sender] == _role);\r\n        _;\r\n    }\r\n\r\n    modifier onlyAsOrOwner(Role _role) {\r\n        require(roles[msg.sender] == _role || msg.sender == owner);\r\n        _;\r\n    }\r\n\r\n    modifier onlyAsOrOwnerOrBy(Role _role, address _account) {\r\n        require(msg.sender == _account || msg.sender == owner || roles[msg.sender] == _role);\r\n        _;\r\n    }\r\n\r\n    /*\r\n    * @title Set user's role\r\n    * @author Tadas Talaikis <info@talaikis.com>\r\n    * @param {address} _user User's address\r\n    * @param {Role} _role Role ID\r\n    * @dev only owner or suepr admin can set this to avoid removal \r\n    * of role from owner itsefl\r\n    */\r\n    function setUserRole(address _user, Role _role)\r\n    public\r\n    onlyAsOrOwner(Role.SuperAdmin)\r\n    returns (bool) {\r\n        roles[_user] = _role;\r\n        return true;\r\n    }\r\n\r\n    /*\r\n    * @title Get user's role\r\n    * @author Tadas Talaikis <info@talaikis.com>\r\n    * @param {address} _user Amount in repuation points\r\n    */\r\n    function getRole(address _user) public view returns (Role) {\r\n        return roles[_user];\r\n    }\r\n\r\n    /*\r\n    * @title Validate as role\r\n    * @author Tadas Talaikis <info@talaikis.com>\r\n    * @param {Role} _role Role ID\r\n    */\r\n    function validateAs(Role _role) public view returns (bool) {\r\n        return (roles[msg.sender] == _role);\r\n    }\r\n\r\n}\r\n",
+  "sourcePath": "C:\\Users\\DXenu\\Desktop\\box\\identiform\\contracts\\database\\Roles.sol",
+  "ast": {
+    "absolutePath": "/C/Users/DXenu/Desktop/box/identiform/contracts/database/Roles.sol",
+    "exportedSymbols": {
+      "Roles": [
+        3799
+      ]
+    },
+    "id": 3800,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3674,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:10"
+      },
+      {
+        "absolutePath": "/C/Users/DXenu/Desktop/box/identiform/contracts/database/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 3675,
+        "nodeType": "ImportDirective",
+        "scope": 3800,
+        "sourceUnit": 3475,
+        "src": "28:23:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3676,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3474,
+              "src": "75:7:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$3474",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 3677,
+            "nodeType": "InheritanceSpecifier",
+            "src": "75:7:10"
+          }
+        ],
+        "contractDependencies": [
+          3474
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3799,
+        "linearizedBaseContracts": [
+          3799,
+          3474
+        ],
+        "name": "Roles",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Roles.Role",
+            "id": 3682,
+            "members": [
+              {
+                "id": 3678,
+                "name": "Default",
+                "nodeType": "EnumValue",
+                "src": "113:7:10"
+              },
+              {
+                "id": 3679,
+                "name": "Admin",
+                "nodeType": "EnumValue",
+                "src": "131:5:10"
+              },
+              {
+                "id": 3680,
+                "name": "Manager",
+                "nodeType": "EnumValue",
+                "src": "147:7:10"
+              },
+              {
+                "id": 3681,
+                "name": "SuperAdmin",
+                "nodeType": "EnumValue",
+                "src": "165:10:10"
+              }
+            ],
+            "name": "Role",
+            "nodeType": "EnumDefinition",
+            "src": "92:90:10"
+          },
+          {
+            "constant": false,
+            "id": 3686,
+            "name": "roles",
+            "nodeType": "VariableDeclaration",
+            "scope": 3799,
+            "src": "190:39:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+              "typeString": "mapping(address => enum Roles.Role)"
+            },
+            "typeName": {
+              "id": 3685,
+              "keyType": {
+                "id": 3683,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "198:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "190:24:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                "typeString": "mapping(address => enum Roles.Role)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 3684,
+                "name": "Role",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 3682,
+                "src": "209:4:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Role_$3682",
+                  "typeString": "enum Roles.Role"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3700,
+              "nodeType": "Block",
+              "src": "266:66:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_Role_$3682",
+                          "typeString": "enum Roles.Role"
+                        },
+                        "id": 3696,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 3691,
+                            "name": "roles",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3686,
+                            "src": "285:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                              "typeString": "mapping(address => enum Roles.Role)"
+                            }
+                          },
+                          "id": 3694,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 3692,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3918,
+                              "src": "291:3:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 3693,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "291:10:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "285:17:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 3695,
+                          "name": "_role",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3688,
+                          "src": "306:5:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          }
+                        },
+                        "src": "285:26:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 3690,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3921,
+                        3922
+                      ],
+                      "referencedDeclaration": 3921,
+                      "src": "277:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 3697,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "277:35:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3698,
+                  "nodeType": "ExpressionStatement",
+                  "src": "277:35:10"
+                },
+                {
+                  "id": 3699,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "323:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3701,
+            "name": "onlyAs",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 3689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3688,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3701,
+                  "src": "254:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3687,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "254:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "253:12:10"
+            },
+            "src": "238:94:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3720,
+              "nodeType": "Block",
+              "src": "375:89:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 3716,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          },
+                          "id": 3711,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 3706,
+                              "name": "roles",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3686,
+                              "src": "394:5:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                                "typeString": "mapping(address => enum Roles.Role)"
+                              }
+                            },
+                            "id": 3709,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 3707,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3918,
+                                "src": "400:3:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 3708,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "400:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "394:17:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Role_$3682",
+                              "typeString": "enum Roles.Role"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 3710,
+                            "name": "_role",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3703,
+                            "src": "415:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Role_$3682",
+                              "typeString": "enum Roles.Role"
+                            }
+                          },
+                          "src": "394:26:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "id": 3715,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 3712,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3918,
+                              "src": "424:3:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 3713,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "424:10:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 3714,
+                            "name": "owner",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3354,
+                            "src": "438:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "src": "424:19:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "394:49:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 3705,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3921,
+                        3922
+                      ],
+                      "referencedDeclaration": 3921,
+                      "src": "386:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 3717,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "386:58:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3718,
+                  "nodeType": "ExpressionStatement",
+                  "src": "386:58:10"
+                },
+                {
+                  "id": 3719,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "455:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3721,
+            "name": "onlyAsOrOwner",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 3704,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3703,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3721,
+                  "src": "363:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3702,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "363:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "362:12:10"
+            },
+            "src": "340:124:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3747,
+              "nodeType": "Block",
+              "src": "529:115:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 3743,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "id": 3736,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            "id": 3731,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 3728,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3918,
+                                "src": "548:3:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 3729,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "548:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "==",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 3730,
+                              "name": "_account",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3725,
+                              "src": "562:8:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "src": "548:22:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "||",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            "id": 3735,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 3732,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3918,
+                                "src": "574:3:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 3733,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "574:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "==",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 3734,
+                              "name": "owner",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3354,
+                              "src": "588:5:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "src": "574:19:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          },
+                          "src": "548:45:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          },
+                          "id": 3742,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 3737,
+                              "name": "roles",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3686,
+                              "src": "597:5:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                                "typeString": "mapping(address => enum Roles.Role)"
+                              }
+                            },
+                            "id": 3740,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 3738,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3918,
+                                "src": "603:3:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 3739,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "603:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "597:17:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Role_$3682",
+                              "typeString": "enum Roles.Role"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 3741,
+                            "name": "_role",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3723,
+                            "src": "618:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Role_$3682",
+                              "typeString": "enum Roles.Role"
+                            }
+                          },
+                          "src": "597:26:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "548:75:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 3727,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3921,
+                        3922
+                      ],
+                      "referencedDeclaration": 3921,
+                      "src": "540:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 3744,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "540:84:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3745,
+                  "nodeType": "ExpressionStatement",
+                  "src": "540:84:10"
+                },
+                {
+                  "id": 3746,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "635:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3748,
+            "name": "onlyAsOrOwnerOrBy",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 3726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3723,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3748,
+                  "src": "499:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3722,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "499:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3725,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3748,
+                  "src": "511:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "498:30:10"
+            },
+            "src": "472:172:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3769,
+              "nodeType": "Block",
+              "src": "1046:61:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 3761,
+                        "name": "roles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3686,
+                        "src": "1057:5:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                          "typeString": "mapping(address => enum Roles.Role)"
+                        }
+                      },
+                      "id": 3763,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 3762,
+                        "name": "_user",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3750,
+                        "src": "1063:5:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1057:12:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Role_$3682",
+                        "typeString": "enum Roles.Role"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3764,
+                      "name": "_role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3752,
+                      "src": "1072:5:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Role_$3682",
+                        "typeString": "enum Roles.Role"
+                      }
+                    },
+                    "src": "1057:20:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "id": 3766,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1057:20:10"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 3767,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1095:4:10",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 3760,
+                  "id": 3768,
+                  "nodeType": "Return",
+                  "src": "1088:11:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3770,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 3755,
+                      "name": "Role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3682,
+                      "src": "1009:4:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Role_$3682_$",
+                        "typeString": "type(enum Roles.Role)"
+                      }
+                    },
+                    "id": 3756,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "SuperAdmin",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1009:15:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  }
+                ],
+                "id": 3757,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 3754,
+                  "name": "onlyAsOrOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3721,
+                  "src": "995:13:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Role_$3682_$",
+                    "typeString": "modifier (enum Roles.Role)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "995:30:10"
+              }
+            ],
+            "name": "setUserRole",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3753,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3750,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3770,
+                  "src": "951:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3749,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "951:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3752,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3770,
+                  "src": "966:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3751,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "966:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "950:27:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3760,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3759,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3770,
+                  "src": "1040:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3758,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1040:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1039:6:10"
+            },
+            "scope": 3799,
+            "src": "930:177:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3781,
+              "nodeType": "Block",
+              "src": "1327:38:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3777,
+                      "name": "roles",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3686,
+                      "src": "1345:5:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                        "typeString": "mapping(address => enum Roles.Role)"
+                      }
+                    },
+                    "id": 3779,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3778,
+                      "name": "_user",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3772,
+                      "src": "1351:5:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1345:12:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "functionReturnParameters": 3776,
+                  "id": 3780,
+                  "nodeType": "Return",
+                  "src": "1338:19:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3782,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getRole",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3773,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3772,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3782,
+                  "src": "1285:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3771,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1285:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1284:15:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3776,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3775,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3782,
+                  "src": "1321:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3774,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "1321:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1320:6:10"
+            },
+            "scope": 3799,
+            "src": "1268:97:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3797,
+              "nodeType": "Block",
+              "src": "1564:54:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_Role_$3682",
+                          "typeString": "enum Roles.Role"
+                        },
+                        "id": 3794,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 3789,
+                            "name": "roles",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3686,
+                            "src": "1583:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                              "typeString": "mapping(address => enum Roles.Role)"
+                            }
+                          },
+                          "id": 3792,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 3790,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3918,
+                              "src": "1589:3:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 3791,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1589:10:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1583:17:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 3793,
+                          "name": "_role",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3784,
+                          "src": "1604:5:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          }
+                        },
+                        "src": "1583:26:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "id": 3795,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1582:28:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3788,
+                  "id": 3796,
+                  "nodeType": "Return",
+                  "src": "1575:35:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3798,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "validateAs",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3785,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3784,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3798,
+                  "src": "1525:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3783,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "1525:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1524:12:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3787,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3798,
+                  "src": "1558:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3786,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1558:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1557:6:10"
+            },
+            "scope": 3799,
+            "src": "1505:113:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3800,
+        "src": "57:1566:10"
+      }
+    ],
+    "src": "0:1625:10"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/DXenu/Desktop/box/identiform/contracts/database/Roles.sol",
+    "exportedSymbols": {
+      "Roles": [
+        3799
+      ]
+    },
+    "id": 3800,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3674,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:10"
+      },
+      {
+        "absolutePath": "/C/Users/DXenu/Desktop/box/identiform/contracts/database/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 3675,
+        "nodeType": "ImportDirective",
+        "scope": 3800,
+        "sourceUnit": 3475,
+        "src": "28:23:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3676,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3474,
+              "src": "75:7:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$3474",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 3677,
+            "nodeType": "InheritanceSpecifier",
+            "src": "75:7:10"
+          }
+        ],
+        "contractDependencies": [
+          3474
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3799,
+        "linearizedBaseContracts": [
+          3799,
+          3474
+        ],
+        "name": "Roles",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Roles.Role",
+            "id": 3682,
+            "members": [
+              {
+                "id": 3678,
+                "name": "Default",
+                "nodeType": "EnumValue",
+                "src": "113:7:10"
+              },
+              {
+                "id": 3679,
+                "name": "Admin",
+                "nodeType": "EnumValue",
+                "src": "131:5:10"
+              },
+              {
+                "id": 3680,
+                "name": "Manager",
+                "nodeType": "EnumValue",
+                "src": "147:7:10"
+              },
+              {
+                "id": 3681,
+                "name": "SuperAdmin",
+                "nodeType": "EnumValue",
+                "src": "165:10:10"
+              }
+            ],
+            "name": "Role",
+            "nodeType": "EnumDefinition",
+            "src": "92:90:10"
+          },
+          {
+            "constant": false,
+            "id": 3686,
+            "name": "roles",
+            "nodeType": "VariableDeclaration",
+            "scope": 3799,
+            "src": "190:39:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+              "typeString": "mapping(address => enum Roles.Role)"
+            },
+            "typeName": {
+              "id": 3685,
+              "keyType": {
+                "id": 3683,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "198:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "190:24:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                "typeString": "mapping(address => enum Roles.Role)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 3684,
+                "name": "Role",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 3682,
+                "src": "209:4:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Role_$3682",
+                  "typeString": "enum Roles.Role"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3700,
+              "nodeType": "Block",
+              "src": "266:66:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_Role_$3682",
+                          "typeString": "enum Roles.Role"
+                        },
+                        "id": 3696,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 3691,
+                            "name": "roles",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3686,
+                            "src": "285:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                              "typeString": "mapping(address => enum Roles.Role)"
+                            }
+                          },
+                          "id": 3694,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 3692,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3918,
+                              "src": "291:3:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 3693,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "291:10:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "285:17:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 3695,
+                          "name": "_role",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3688,
+                          "src": "306:5:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          }
+                        },
+                        "src": "285:26:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 3690,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3921,
+                        3922
+                      ],
+                      "referencedDeclaration": 3921,
+                      "src": "277:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 3697,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "277:35:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3698,
+                  "nodeType": "ExpressionStatement",
+                  "src": "277:35:10"
+                },
+                {
+                  "id": 3699,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "323:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3701,
+            "name": "onlyAs",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 3689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3688,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3701,
+                  "src": "254:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3687,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "254:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "253:12:10"
+            },
+            "src": "238:94:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3720,
+              "nodeType": "Block",
+              "src": "375:89:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 3716,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          },
+                          "id": 3711,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 3706,
+                              "name": "roles",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3686,
+                              "src": "394:5:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                                "typeString": "mapping(address => enum Roles.Role)"
+                              }
+                            },
+                            "id": 3709,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 3707,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3918,
+                                "src": "400:3:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 3708,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "400:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "394:17:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Role_$3682",
+                              "typeString": "enum Roles.Role"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 3710,
+                            "name": "_role",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3703,
+                            "src": "415:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Role_$3682",
+                              "typeString": "enum Roles.Role"
+                            }
+                          },
+                          "src": "394:26:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "id": 3715,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 3712,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3918,
+                              "src": "424:3:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 3713,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "424:10:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 3714,
+                            "name": "owner",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3354,
+                            "src": "438:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "src": "424:19:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "394:49:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 3705,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3921,
+                        3922
+                      ],
+                      "referencedDeclaration": 3921,
+                      "src": "386:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 3717,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "386:58:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3718,
+                  "nodeType": "ExpressionStatement",
+                  "src": "386:58:10"
+                },
+                {
+                  "id": 3719,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "455:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3721,
+            "name": "onlyAsOrOwner",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 3704,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3703,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3721,
+                  "src": "363:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3702,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "363:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "362:12:10"
+            },
+            "src": "340:124:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3747,
+              "nodeType": "Block",
+              "src": "529:115:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 3743,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "id": 3736,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            "id": 3731,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 3728,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3918,
+                                "src": "548:3:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 3729,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "548:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "==",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 3730,
+                              "name": "_account",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3725,
+                              "src": "562:8:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "src": "548:22:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "||",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            "id": 3735,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 3732,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3918,
+                                "src": "574:3:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 3733,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "574:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "==",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 3734,
+                              "name": "owner",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3354,
+                              "src": "588:5:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "src": "574:19:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          },
+                          "src": "548:45:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          },
+                          "id": 3742,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 3737,
+                              "name": "roles",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3686,
+                              "src": "597:5:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                                "typeString": "mapping(address => enum Roles.Role)"
+                              }
+                            },
+                            "id": 3740,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 3738,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3918,
+                                "src": "603:3:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 3739,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "603:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "597:17:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Role_$3682",
+                              "typeString": "enum Roles.Role"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 3741,
+                            "name": "_role",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3723,
+                            "src": "618:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Role_$3682",
+                              "typeString": "enum Roles.Role"
+                            }
+                          },
+                          "src": "597:26:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "548:75:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 3727,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3921,
+                        3922
+                      ],
+                      "referencedDeclaration": 3921,
+                      "src": "540:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 3744,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "540:84:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3745,
+                  "nodeType": "ExpressionStatement",
+                  "src": "540:84:10"
+                },
+                {
+                  "id": 3746,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "635:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3748,
+            "name": "onlyAsOrOwnerOrBy",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 3726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3723,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3748,
+                  "src": "499:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3722,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "499:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3725,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3748,
+                  "src": "511:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "498:30:10"
+            },
+            "src": "472:172:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3769,
+              "nodeType": "Block",
+              "src": "1046:61:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 3761,
+                        "name": "roles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3686,
+                        "src": "1057:5:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                          "typeString": "mapping(address => enum Roles.Role)"
+                        }
+                      },
+                      "id": 3763,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 3762,
+                        "name": "_user",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3750,
+                        "src": "1063:5:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1057:12:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Role_$3682",
+                        "typeString": "enum Roles.Role"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3764,
+                      "name": "_role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3752,
+                      "src": "1072:5:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Role_$3682",
+                        "typeString": "enum Roles.Role"
+                      }
+                    },
+                    "src": "1057:20:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "id": 3766,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1057:20:10"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 3767,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1095:4:10",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 3760,
+                  "id": 3768,
+                  "nodeType": "Return",
+                  "src": "1088:11:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3770,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 3755,
+                      "name": "Role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3682,
+                      "src": "1009:4:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Role_$3682_$",
+                        "typeString": "type(enum Roles.Role)"
+                      }
+                    },
+                    "id": 3756,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "SuperAdmin",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1009:15:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  }
+                ],
+                "id": 3757,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 3754,
+                  "name": "onlyAsOrOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3721,
+                  "src": "995:13:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Role_$3682_$",
+                    "typeString": "modifier (enum Roles.Role)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "995:30:10"
+              }
+            ],
+            "name": "setUserRole",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3753,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3750,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3770,
+                  "src": "951:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3749,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "951:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3752,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3770,
+                  "src": "966:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3751,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "966:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "950:27:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3760,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3759,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3770,
+                  "src": "1040:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3758,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1040:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1039:6:10"
+            },
+            "scope": 3799,
+            "src": "930:177:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3781,
+              "nodeType": "Block",
+              "src": "1327:38:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3777,
+                      "name": "roles",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3686,
+                      "src": "1345:5:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                        "typeString": "mapping(address => enum Roles.Role)"
+                      }
+                    },
+                    "id": 3779,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3778,
+                      "name": "_user",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3772,
+                      "src": "1351:5:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1345:12:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "functionReturnParameters": 3776,
+                  "id": 3780,
+                  "nodeType": "Return",
+                  "src": "1338:19:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3782,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getRole",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3773,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3772,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3782,
+                  "src": "1285:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3771,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1285:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1284:15:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3776,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3775,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3782,
+                  "src": "1321:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3774,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "1321:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1320:6:10"
+            },
+            "scope": 3799,
+            "src": "1268:97:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3797,
+              "nodeType": "Block",
+              "src": "1564:54:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_Role_$3682",
+                          "typeString": "enum Roles.Role"
+                        },
+                        "id": 3794,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 3789,
+                            "name": "roles",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3686,
+                            "src": "1583:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_enum$_Role_$3682_$",
+                              "typeString": "mapping(address => enum Roles.Role)"
+                            }
+                          },
+                          "id": 3792,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 3790,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3918,
+                              "src": "1589:3:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 3791,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1589:10:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1583:17:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 3793,
+                          "name": "_role",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3784,
+                          "src": "1604:5:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Role_$3682",
+                            "typeString": "enum Roles.Role"
+                          }
+                        },
+                        "src": "1583:26:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "id": 3795,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1582:28:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3788,
+                  "id": 3796,
+                  "nodeType": "Return",
+                  "src": "1575:35:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3798,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "validateAs",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3785,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3784,
+                  "name": "_role",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3798,
+                  "src": "1525:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Role_$3682",
+                    "typeString": "enum Roles.Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3783,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3682,
+                    "src": "1525:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Role_$3682",
+                      "typeString": "enum Roles.Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1524:12:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3787,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3798,
+                  "src": "1558:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3786,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1558:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1557:6:10"
+            },
+            "scope": 3799,
+            "src": "1505:113:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3800,
+        "src": "57:1566:10"
+      }
+    ],
+    "src": "0:1625:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-06-17T09:46:19.868Z"
+}

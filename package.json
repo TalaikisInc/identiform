@@ -1,0 +1,64 @@
+{
+  "name": "identiform-contaracts",
+  "version": "1.0.0",
+  "scripts": {
+    "lint:contract": "solium -d contracts/",
+    "lint:contract:fix": "solium -d contracts/ --fix",
+    "compile:local": "rm -rf build/ && truffle compile --network development",
+    "coverage": "./node_modules/.bin/solidity-coverage",
+    "rpc": "ganache-cli --defaultBalanceEther 1000000 --gasPrice 1 --gasLimit 0xfffffffffff --seed --networkId 336",
+    "rpc:rinkeby": "geth --datadir=~/.ethereum --rinkeby --rpc --rpcapi db,eth,net,web3,personal",
+    "test": "truffle test",
+    "copy": "rimraf -R app/src/contracts/*.json && cp -R build/contracts/*.json app/src/contracts/",
+    "flatten": "truffle-flattener contracts/Factory.sol >> contracts/flat/Factory.sol",
+    "docs": "solidity-docgen /mnt/c/Users/DXenu/Desktop/box/identiform /mnt/c/Users/DXenu/Desktop/box/identiform/contracts /mnt/c/Users/DXenu/Desktop/box/identiform/docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/identiform/identiform.git"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "kyc"
+  ],
+  "bugs": {
+    "url": "https://github.com/identiform/identiform/issues"
+  },
+  "author": "Tadas Talaikis, Identiform <info@talaikis.com>",
+  "license": "GPLv3",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cross-env": "^5.1.5",
+    "solidity-docgen": "^0.1.0",
+    "truffle": "^4.1.11",
+    "truffle-contract": "^3.0.4",
+    "truffle-hdwallet-provider": "0.0.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.22.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
+    "dotenv": "^5.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-babel": "^5.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "ganache-cli": "^6.1.0",
+    "solc": "^0.4.24",
+    "solidity-coverage": "^0.4.15",
+    "solium": "^1.1.7",
+    "truffle-flattener": "^1.2.5",
+    "truffle-hdwallet-provider-privkey": "^0.2.0",
+    "webpack": "^4.8.3"
+  }
+}

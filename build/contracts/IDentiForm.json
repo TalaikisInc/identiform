@@ -1,0 +1,399 @@
+{
+  "contractName": "IDentiForm",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getUserState",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.23;\r\n\r\n\r\ncontract IDentiForm {\r\n    enum UserState {\r\n        Waiting,\r\n        Approved,\r\n        Disapproved\r\n    }\r\n\r\n    function getUserState(address _user) public payable returns (UserState, string); \r\n}\r\n",
+  "sourcePath": "C:\\Users\\DXenu\\Desktop\\box\\identiform\\contracts\\interfaces\\IDentiForm.sol",
+  "ast": {
+    "absolutePath": "/C/Users/DXenu/Desktop/box/identiform/contracts/interfaces/IDentiForm.sol",
+    "exportedSymbols": {
+      "IDentiForm": [
+        3976
+      ]
+    },
+    "id": 3977,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3962,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:13"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3976,
+        "linearizedBaseContracts": [
+          3976
+        ],
+        "name": "IDentiForm",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IDentiForm.UserState",
+            "id": 3966,
+            "members": [
+              {
+                "id": 3963,
+                "name": "Waiting",
+                "nodeType": "EnumValue",
+                "src": "83:7:13"
+              },
+              {
+                "id": 3964,
+                "name": "Approved",
+                "nodeType": "EnumValue",
+                "src": "101:8:13"
+              },
+              {
+                "id": 3965,
+                "name": "Disapproved",
+                "nodeType": "EnumValue",
+                "src": "120:11:13"
+              }
+            ],
+            "name": "UserState",
+            "nodeType": "EnumDefinition",
+            "src": "57:81:13"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3975,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "getUserState",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3969,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3968,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3975,
+                  "src": "168:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3967,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "168:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "167:15:13"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 3974,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3971,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3975,
+                  "src": "207:9:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_UserState_$3966",
+                    "typeString": "enum IDentiForm.UserState"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3970,
+                    "name": "UserState",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3966,
+                    "src": "207:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_UserState_$3966",
+                      "typeString": "enum IDentiForm.UserState"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3973,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3975,
+                  "src": "218:6:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3972,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "206:19:13"
+            },
+            "scope": 3976,
+            "src": "146:80:13",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3977,
+        "src": "30:200:13"
+      }
+    ],
+    "src": "0:232:13"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/DXenu/Desktop/box/identiform/contracts/interfaces/IDentiForm.sol",
+    "exportedSymbols": {
+      "IDentiForm": [
+        3976
+      ]
+    },
+    "id": 3977,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3962,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:13"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3976,
+        "linearizedBaseContracts": [
+          3976
+        ],
+        "name": "IDentiForm",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IDentiForm.UserState",
+            "id": 3966,
+            "members": [
+              {
+                "id": 3963,
+                "name": "Waiting",
+                "nodeType": "EnumValue",
+                "src": "83:7:13"
+              },
+              {
+                "id": 3964,
+                "name": "Approved",
+                "nodeType": "EnumValue",
+                "src": "101:8:13"
+              },
+              {
+                "id": 3965,
+                "name": "Disapproved",
+                "nodeType": "EnumValue",
+                "src": "120:11:13"
+              }
+            ],
+            "name": "UserState",
+            "nodeType": "EnumDefinition",
+            "src": "57:81:13"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3975,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "getUserState",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3969,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3968,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3975,
+                  "src": "168:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3967,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "168:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "167:15:13"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 3974,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3971,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3975,
+                  "src": "207:9:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_UserState_$3966",
+                    "typeString": "enum IDentiForm.UserState"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3970,
+                    "name": "UserState",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3966,
+                    "src": "207:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_UserState_$3966",
+                      "typeString": "enum IDentiForm.UserState"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3973,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3975,
+                  "src": "218:6:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3972,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "206:19:13"
+            },
+            "scope": 3976,
+            "src": "146:80:13",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3977,
+        "src": "30:200:13"
+      }
+    ],
+    "src": "0:232:13"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-06-13T13:32:40.067Z"
+}
