@@ -21,5 +21,5 @@ echo 'Building...'
 PORT=$PORT npm run build
 
 echo 'Starting server.' 
-pm2 delete $APP_NAME
-PORT=$PORT pm2 start npm --name $APP_NAME -- start
+PORT=$PORT pm2 reload "$APP_NAME"
+PORT=$PORT pm2 start ./index.js --name "$APP_NAME"
