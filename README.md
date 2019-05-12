@@ -1,10 +1,10 @@
 <p a<p align="center">
-  <a href="https://identiform.com/">
+  <a href="https://talaikis.com/">
     <img alt="identiForm" src="https://github.com/Identiform/website/blob/master/src/assets/img/logo.png" width="683">
   </a>
 </p>
 
-# [identiForm](https://app.identiform.com/)
+# [identiForm](https://blockchain.talaikis.com/)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Dependency Status](https://david-dm.org/identiform/identiform.svg)](https://david-dm.org/identiform/identiform)
