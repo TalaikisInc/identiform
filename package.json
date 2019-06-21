@@ -33,7 +33,7 @@
     "chalk": "^2.4.1",
     "cross-env": "^5.1.5",
     "solidity-docgen": "^0.1.0",
-    "truffle": "^4.1.11",
+    "truffle": "^5.0.24",
     "truffle-contract": "^3.0.4",
     "truffle-hdwallet-provider": "0.0.5"
   },
