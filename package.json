@@ -55,9 +55,9 @@
     "eslint-plugin-standard": "^3.0.1",
     "ganache-cli": "^6.1.0",
     "solc": "^0.4.24",
-    "solidity-coverage": "^0.4.15",
+    "solidity-coverage": "^0.8.2",
     "solium": "^1.1.7",
-    "truffle-flattener": "^1.2.5",
+    "truffle-flattener": "^1.6.0",
     "truffle-hdwallet-provider-privkey": "^0.2.0",
     "webpack": "^4.8.3"
   }
